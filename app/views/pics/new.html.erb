@@ -1,11 +1,12 @@
-<div class="smurfy">
+<div class="smurfy span6 offset4 text-center">
+<h1 class="custom-h1">Tell us what you ate today? </h1>
 
 <%= simple_form_for @pic do |f| %>
-	<%= f.input :title %>
-	<%= f.input :subtitle %>
-	<%= f.input :message %>
+	<%= f.input :title, label: 'What is this pic about?', placeholder: 'My lunch' %>
+	<%= f.input :subtitle, label: 'What is your subtitle?', placeholder: 'More information about my lunch' %>
+	<%= f.input :message, label: 'What is your message?', placeholder: 'More information about my message' %>
 
-	<%= f.submit "Save" %>
+	<%= f.submit "Add my pic", :class => 'btn btn-primary btn-large' %>
 
 <% end %>
 
